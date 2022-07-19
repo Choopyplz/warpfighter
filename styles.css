@@ -3,32 +3,118 @@ html {
     background-size: cover;
     min-width: 50%;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 2rem;
 }
 
-header {
+.header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 h1 {
     max-width: 800px;
 }
 
-.nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    list-style: none;
-    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.nav a {
-    margin: 20px;
+li {
+    list-style: none;
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.nav-link {
+    transition: 0.7s ease;
+}
+
+.nav-link:hover {
+    color: rgb(94, 64, 228);
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: white;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+@media (max-width: 768px) {
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: gold;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+}
+
+a {
+    margin: 10px;
     border-radius: 5px;
-    font-weight: 900;
-    font-size: 1.5rem;
+    font-weight: 1000;
+    font-size: 2rem;
     text-shadow: 2px 2px red;
     color: rgb(255, 255, 255);
     padding: 1em;
@@ -37,8 +123,8 @@ h1 {
 
 .ships {
     display: grid;
+    margin-left: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    align-items: center;
     justify-content: space-evenly;
     list-style: none;
     padding: 1rem;
