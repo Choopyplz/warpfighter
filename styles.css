@@ -8,6 +8,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 30px;
 }
 
 h1 {
@@ -30,9 +31,43 @@ li {
     list-style: none;
 }
 
-a {
-    color: white;
+.navbar a {
+    font-size: 1.5rem;
+    font-weight: 1000;
+    color: rgb(215, 12, 12);
     text-decoration: none;
+}
+
+a:hover {
+    color: rgb(152, 67, 244);
+    font-size: 2rem;
+    transition: 0.3s;
+}
+
+.navwide {
+    
+    display: none;
+}
+
+.navwidelist {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+}
+
+.navwide a {
+    font-size: 1.5rem;
+    font-weight: 1000;
+    color: rgb(215, 12, 12);
+    text-decoration: none;
+}
+
+.navwide a:hover {
+    color: rgb(152, 67, 244);
+    font-size: 2rem;
+    transition: 0.3s;
 }
 
 .navbar {
@@ -46,33 +81,29 @@ a {
 .hamburger {
     display: block;
     cursor: pointer;
+    background-color: rgb(197, 65, 38);
+    padding: 4px 8px;
 }
 
 .nav-menu {
     visibility: hidden;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
     position: absolute;
     margin-top: 3rem;
     left: 0;
     top: -100%;
-    background-color: rgba(238, 232, 49, 0.6);
+    background-color: rgba(238, 232, 49, 0.9);
     width: 100%;
     border-radius: 10px;
-    text-align: center;
 }
 
 .nav-link {
-    font-size: 1.6rem;
-    font-weight: 400;
-    color: white;
+    text-shadow: 2px 2px 8px rgb(122, 122, 122);
     transition: 0.3s ease;
-}
-
-.nav-link:hover {
-    color: rgb(155, 139, 231);
 }
 
 .bar {
@@ -81,18 +112,19 @@ a {
     height: 5px;
     margin: 5px auto;
     transition: all 0.3s ease-in-out;
-    background-color: white;
-}
-
-.nav-item {
-    margin: 16px 0;
+    background-color: rgb(235, 216, 104);
 }
 
 .nav-menu.active {
     visibility: visible;
-    /* transition: 0.5s ease-in-out; */
     left: 0;
-    top: 30%;
+    top: 0;
+    transition: .3s;
+    max-width: 100%;
+}
+
+.nav-menu.active.overlay {
+    visibility: visible;
 }
 
 .hamburger.active .bar:nth-child(2){
@@ -103,11 +135,7 @@ a {
 }
 .hamburger.active .bar:nth-child(3){
     transform: translateY(-10px) rotate(-45deg);
-}
-
-/* .navwide {
-    visibility: hidden;
-} */
+} 
 
 .ships {
     display: flex;
@@ -135,4 +163,21 @@ img {
     align-content: center;
     max-width: 100%;
     color: white;
+}
+
+@media only screen and (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+    .nav-menu {
+        display: none;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .navwide {
+        display: contents;
+    }
 }
