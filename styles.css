@@ -34,18 +34,17 @@ li {
 .navbar a {
     font-size: 1.5rem;
     font-weight: 1000;
-    color: rgb(215, 12, 12);
+    color: rgb(244, 203, 82);
     text-decoration: none;
 }
 
-a:hover {
-    color: rgb(152, 67, 244);
+.nav-menu a:hover {
+    color: rgb(71, 40, 193);
     font-size: 2rem;
     transition: 0.3s;
 }
 
 .navwide {
-    
     display: none;
 }
 
@@ -60,8 +59,11 @@ a:hover {
 .navwide a {
     font-size: 1.5rem;
     font-weight: 1000;
-    color: rgb(215, 12, 12);
+    color: rgb(244, 203, 82);
     text-decoration: none;
+    padding: 12px;
+    width: 25%; 
+    text-align: center;
 }
 
 .navwide a:hover {
@@ -96,13 +98,13 @@ a:hover {
     margin-top: 3rem;
     left: 0;
     top: -100%;
-    background-color: rgba(238, 232, 49, 0.9);
+    background-color: rgba(228, 77, 53, 0.9);
     width: 100%;
     border-radius: 10px;
 }
 
 .nav-link {
-    text-shadow: 2px 2px 8px rgb(122, 122, 122);
+    /* text-shadow: 2px 2px 20px rgb(218, 218, 218); */
     transition: 0.3s ease;
 }
 
