@@ -10,22 +10,22 @@
 
 <body class="body">
     <header>
-        <h1><img src="images/logoFinal.png" alt="logoFinal"></h1>
+        <h1><img src="images/logoFinal.png" alt="Logo"></h1>
 
         <!-- Hamburger Menu Nav -->
         <nav class="navbar">
             <ul class="nav-menu" >
                 <li class="nav-item">
-                    <a href="#" class="nav-link">SAGA</a>
+                    <a href="#saga" class="nav-link">SAGA</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">VESSELS</a>
+                    <a href="#vessels" class="nav-link">VESSELS</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">GALLERY</a>
+                    <a href="#gallery" class="nav-link">GALLERY</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">CONTACT</a>
+                    <a href="#contact" class="nav-link">CONTACT</a>
                 </li>
             </ul>
 
@@ -38,27 +38,55 @@
         
         <nav class="navwide">
             <ul class="navwidelist">
-                <li><a href="#" class="nav-link">SAGA</a></li>
-                <li><a href="#" class="nav-link">VESSELS</a></li>
-                <li><a href="#" class="nav-link">GALLERY</a></li>
-                <li><a href="#" class="nav-link">CONTACT</a></li>
+                <li><a href="#saga" class="nav-link">SAGA</a></li>
+                <li><a href="#vessels" class="nav-link">VESSELS</a></li>
+                <li><a href="#galley" class="nav-link">GALLERY</a></li>
+                <li><a href="#contact" class="nav-link">CONTACT</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Hero image goes here -->
-
+    <h2><img src="images/heroimg.png" alt="Hero Space Battle"></h2>
     <!-- Story Synopsis -->
+    <article id="saga">
+        3497 AE: Humanity has made the great leap across spacetime to our neighboring galaxy, the Andromeda Galaxy, utilizing breakthrough warp engine technology that allows vessels to traverse between the folds in spacetime. The United Terran Solar Fleet has been dispatched to investigate an Earth-like expolanet first discovered centuries prior. Upon investigation, footage of distant technoogy of some sort could be visible on the live video feed, before a flash of light silenced all communication from the exploratory team. You are in charge of the recovery unit, find out what happened to the away team!  
+    </article>
 
     <!-- <p class="saga">3477 A.E. Humanity has made the great leap across spacetime to its neighboring galaxy, the Andromeda galaxy</p> -->
 
     <!-- Ship gallery -->
     
-    <ul class="ships">
+    <ul class="ships" id="vessels">
         <li><img src="images/shipSprite1.png" alt="sprite1"></li>
         <li><img src="images/shipSprite2.png" alt="sprite2"></li>
         <li><img src="images/shipSprite5.png" alt="sprite5"></li>
+        <li><img src="images/enemySprite1.png" alt="sprite5"></li>
+        <li><img src="images/enemySprite2.png" alt="sprite5"></li>
+        <li><img src="images/enemySprite3.png" alt="sprite5"></li>
     </ul>
+
+    <ul class="gallery" id="gallery">
+        <li><img src="images/Panel1.png" alt="sprite1"></li>
+        <li><img src="images/Panel2.png" alt="sprite1"></li>
+        <li><img src="images/Panel3.png" alt="sprite1"></li>
+        <li><img src="images/Panel5.png" alt="sprite1"></li>
+    </ul>
+
+
+    <div class="container" id="contact">
+        <form action="action_page.php">
+      
+          <label for="name">NAME</label>
+          <input type="text" id="name" name="name" placeholder="Your name..">
+
+          <label for="comment">COMMENT</label>
+          <textarea id="comment" name="comment" placeholder="Write something.." style="height:200px"></textarea>
+      
+          <input type="SUBMIT" value="SUBMIT">
+      
+        </form>
+      </div> 
     
 
 
