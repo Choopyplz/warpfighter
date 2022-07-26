@@ -21,6 +21,10 @@ body {
     background-size: cover;
 }
 
+h1 img {
+    max-width: 100%;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -138,21 +142,39 @@ li {
     transform: translateY(-10px) rotate(-45deg);
 } 
 
-.ships {
+.vessels {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 30px 10px;
+    gap: 20px 10px;
     max-width: 100%;
-    justify-content: space-around;
+    justify-content: space-evenly;
     list-style: none;
     padding: 1rem;
     margin-top: 2rem;
 }
 
-.ships img {
-    max-width: 300px;
+.vessels img {
+    max-width: 275px;
 }
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+
 
 .summary {
     position: relative;
@@ -161,26 +183,8 @@ li {
     min-width: 300px;
 }
 
-.overlay {
-    position: absolute;
-    bottom: 0;
-    background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.5);
-    color: #f1f1f1;
-    width: 100%;
-    transition: .5s ease;
-    opacity:0;
-    color: white;
-    font-size: 20px;
-    text-align: center;
-}
-
 .summary:hover .overlay {
     opacity: 1;
-}
-
-img {
-    max-width: 100%;
 }
 
 h2 {
@@ -189,6 +193,7 @@ h2 {
     max-width: 100%;
     min-width: 300px;
     padding: 5px;
+    border-radius: 15px;
     display: flex;
     justify-content: center;
     align-self: center;
@@ -196,6 +201,7 @@ h2 {
 
 h2 img {
     max-width: 800px;
+    min-width: 300px;
 }
 
 .saga {
@@ -204,32 +210,77 @@ h2 img {
     align-content: center;
     max-width: 100%;
     padding: 15px;
+    border-radius: 15px;
     background-color: rgba(71, 40, 193, 0.658);
     color: white;
     font-size: 1.2rem;
     font-weight: 600;
 }
 
-/* .gallery { 
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: auto;
-    grid-gap: 20px;
-    justify-content: space-evenly;
-    justify-items: center;
-    align-content: space-evenly;
-    align-items: center;
-    }
+h3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(228, 76, 53, 0.75);
+    font-size: 1em;
+    padding: 10px;
+    color: white;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
 
-.gallery img {
-    min-width: 300px;
+.container {
     max-width: 100%;
+    padding: 50px 20px;
+    margin: 0 auto;
+}
+
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
+    grid-template-rows: auto;
+    justify-content: space-around;
+    grid-gap: 20px;
+}
+
+.galleryImg {
+    max-width: 100%;
+    border-radius: 10px;
+    position: relative;
     transition: transform 250ms;
-} */
+    cursor: pointer;
+}
+
+.galleryImg:hover {
+    transform: translatey(5px);
+    box-shadow: 0 0 10px rgba(228, 76, 53, 0.75);
+}
+
+#popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: 250ms;
+    padding: 20px;
+}
+
+#selectedImage {
+    max-height: 100%;
+    max-width: 100%;
+}
 
 .gallery img:hover {
     transform: translateY(-10px);
-    box-shadow: 3px 3px 10px rgba(228, 76, 53, 0.75);
+    box-shadow: 3px 3px 15px rgba(228, 76, 53, 0.75);
 }
 
 /* ------------Contact form-------------- */
@@ -269,6 +320,7 @@ input[type=submit]:hover {
     border-radius: 2px;
     background-color: rgba(228, 77, 53, 0.8);
     padding: 20px;
+    border-radius: 15px;
     min-width: 280px;
     max-width: 100%;
     font-size: 1.2rem;
@@ -290,5 +342,19 @@ input[type=submit]:hover {
 
     .navwide {
         display: contents;
+    }
+    #gallery {
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+    }
+
+    h3 {
+        font-size: 2em;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    #gallery {
+        grid-template-columns: repeat(4, minmax(300px, 1fr));
+        justify-items: center;
     }
 }
