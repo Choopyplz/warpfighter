@@ -40,42 +40,62 @@
             <ul class="navwidelist">
                 <li><a href="#saga" class="nav-link">SAGA</a></li>
                 <li><a href="#vessels" class="nav-link">VESSELS</a></li>
-                <li><a href="#galley" class="nav-link">GALLERY</a></li>
+                <li><a href="#gallery" class="nav-link">GALLERY</a></li>
                 <li><a href="#contact" class="nav-link">CONTACT</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Hero image goes here -->
-    <h2><img src="images/heroimg.png" alt="Hero Space Battle"></h2>
+
+    <h2 class="heroimg"><img src="images/heroimg.png" alt="Hero Space Battle"></h2>
+
     <!-- Story Synopsis -->
-    <article id="saga">
+
+    <article class="saga" id="saga">
         3497 AE: Humanity has made the great leap across spacetime to our neighboring galaxy, the Andromeda Galaxy, utilizing breakthrough warp engine technology that allows vessels to traverse between the folds in spacetime. The United Terran Solar Fleet has been dispatched to investigate an Earth-like expolanet first discovered centuries prior. Upon investigation, footage of distant technoogy of some sort could be visible on the live video feed, before a flash of light silenced all communication from the exploratory team. You are in charge of the recovery unit, find out what happened to the away team!  
     </article>
-
-    <!-- <p class="saga">3477 A.E. Humanity has made the great leap across spacetime to its neighboring galaxy, the Andromeda galaxy</p> -->
 
     <!-- Ship gallery -->
     
     <ul class="ships" id="vessels">
-        <li><img src="images/shipSprite1.png" alt="sprite1"></li>
-        <li><img src="images/shipSprite2.png" alt="sprite2"></li>
-        <li><img src="images/shipSprite5.png" alt="sprite5"></li>
-        <li><img src="images/enemySprite1.png" alt="sprite5"></li>
-        <li><img src="images/enemySprite2.png" alt="sprite5"></li>
-        <li><img src="images/enemySprite3.png" alt="sprite5"></li>
+        <li class="summary">
+            <img src="images/shipSprite1.png" alt="Starship 1" id="img">
+            <div class="overlay">Starship 1</div>
+        </li>
+        <li class="summary">
+            <img src="images/shipSprite2.png" alt="Starship 2" id="img">
+            <div class="overlay">Starship 2</div>
+        </li>
+        <li class="summary">
+            <img src="images/shipSprite5.png" alt="Starship 3" id="img">
+            <div class="overlay">Starship 3</div>
+        </li>
+        <li class="summary">
+            <img src="images/enemySprite1.png" alt="Enemy Ship 1" id="img">
+            <div class="overlay">Enemy Fighter 1</div>
+        </li>
+        <li class="summary">
+            <img src="images/enemySprite2.png" alt="Enemy ship 2" id="img">
+            <div class="overlay">Enemy Fighter 2</div>
+        </li>
+        <li class="summary">
+            <img src="images/enemySprite3.png" alt="Enemy ship 3" id="img">
+            <div class="overlay">Enemy Fighter 3</div>
+        </li>
     </ul>
 
-    <ul class="gallery" id="gallery">
-        <li><img src="images/Panel1.png" alt="sprite1"></li>
-        <li><img src="images/Panel2.png" alt="sprite1"></li>
-        <li><img src="images/Panel3.png" alt="sprite1"></li>
-        <li><img src="images/Panel5.png" alt="sprite1"></li>
-    </ul>
+    <div class="container">
+        <h3>Screenshots</h3>
+        <div id="gallery"></div>
+    </div>
+    <div id="popup">
+        <img src="" alt="" id="selectedImage">
+    </div>
 
 
-    <div class="container" id="contact">
-        <form action="action_page.php">
+    <footer class="contact" id="contact">
+        <form id="comments" onsubmit="return validation()">
       
           <label for="name">NAME</label>
           <input type="text" id="name" name="name" placeholder="Your name..">
@@ -83,10 +103,10 @@
           <label for="comment">COMMENT</label>
           <textarea id="comment" name="comment" placeholder="Write something.." style="height:200px"></textarea>
       
-          <input type="SUBMIT" value="SUBMIT">
+          <input type="submit" value="SUBMIT">
       
         </form>
-      </div> 
+    </footer> 
     
 
 

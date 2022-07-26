@@ -104,7 +104,6 @@ li {
 }
 
 .nav-link {
-    /* text-shadow: 2px 2px 20px rgb(218, 218, 218); */
     transition: 0.3s ease;
 }
 
@@ -155,8 +154,48 @@ li {
     max-width: 300px;
 }
 
+.summary {
+    position: relative;
+    align-content: center;
+    max-width: 100%;
+    min-width: 300px;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.summary:hover .overlay {
+    opacity: 1;
+}
+
 img {
     max-width: 100%;
+}
+
+h2 {
+    background-color: rgba(228, 76, 53, 0.75);
+    margin: 20px 0px 20px 0px;
+    max-width: 100%;
+    min-width: 300px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+h2 img {
+    max-width: 800px;
 }
 
 .saga {
@@ -164,7 +203,33 @@ img {
     justify-content: center;
     align-content: center;
     max-width: 100%;
+    padding: 15px;
+    background-color: rgba(71, 40, 193, 0.658);
     color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* .gallery { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+    }
+
+.gallery img {
+    min-width: 300px;
+    max-width: 100%;
+    transition: transform 250ms;
+} */
+
+.gallery img:hover {
+    transform: translateY(-10px);
+    box-shadow: 3px 3px 10px rgba(228, 76, 53, 0.75);
 }
 
 /* ------------Contact form-------------- */
@@ -198,7 +263,7 @@ input[type=submit]:hover {
     color: white;
 }
 
-.container {
+.contact {
     display: flex;
     justify-content: center;
     border-radius: 2px;
