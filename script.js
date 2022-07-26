@@ -43,3 +43,12 @@ popup.addEventListener('click', () => {
 
 
 
+const username = document.getElementById('username');
+const submit = document.getElementById('submit');
+const out1 = document.getElementById('output1')
+
+function fun1() {
+    out1.innerHTML = ("Thank's for your feedback, " + username.value + "!");
+}
+
+submit.addEventListener('click',fun1);

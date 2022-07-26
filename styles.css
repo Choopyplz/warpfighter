@@ -148,14 +148,14 @@ li {
     flex-wrap: wrap;
     gap: 20px 10px;
     max-width: 100%;
-    justify-content: space-evenly;
+    justify-content: space-around;
     list-style: none;
     padding: 1rem;
     margin-top: 2rem;
 }
 
 .vessels img {
-    max-width: 275px;
+    max-width: 300px;
 }
 
 .overlay {
@@ -312,6 +312,7 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: rgb(152, 67, 244);
     color: white;
+    margin-bottom: 40px;
 }
 
 .contact {

@@ -95,17 +95,19 @@
 
 
     <footer class="contact" id="contact">
-        <form id="comments" onsubmit="return validation()">
+        <article id="contact">
       
           <label for="name">NAME</label>
-          <input type="text" id="name" name="name" placeholder="Your name..">
+          <input type="text" id="username" name="name" placeholder="Your name..">
 
           <label for="comment">COMMENT</label>
           <textarea id="comment" name="comment" placeholder="Write something.." style="height:200px"></textarea>
       
-          <input type="submit" value="SUBMIT">
+          <input type="submit" id="submit" value="SUBMIT">
+
+          <p class="output" id="output1"></p>
       
-        </form>
+        </article>
     </footer>
 
 
