@@ -42,13 +42,24 @@ popup.addEventListener('click', () => {
 })
 
 
+// -----------------Comment form-----------------
+
 
 const username = document.getElementById('username');
 const submit = document.getElementById('submit');
 const out1 = document.getElementById('output1')
 
 function fun1() {
-    out1.innerHTML = ("Thank's for your feedback, " + username.value + "!");
+    out1.innerHTML = ("Thanks for your feedback, " + username.value + "!");
 }
 
 submit.addEventListener('click',fun1);
+
+var form = document.getElementById('contact'); {
+function handleForm(event) {
+    event.preventDefault();
+}}
+
+form.addEventListener('submit', handleForm); {
+}
+

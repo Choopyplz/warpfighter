@@ -16,16 +16,16 @@
         <nav class="navbar">
             <ul class="nav-menu" >
                 <li class="nav-item">
-                    <a href="#saga" class="nav-link">SAGA</a>
+                    <a href="#sagaHeader" class="nav-link">SAGA</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#vessels" class="nav-link">VESSELS</a>
+                    <a href="#vesselShips" class="nav-link">VESSELS</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#gallery" class="nav-link">GALLERY</a>
+                    <a href="#screenShots" class="nav-link">SCREENSHOTS</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#contact" class="nav-link">CONTACT</a>
+                    <a href="#contactHeader" class="nav-link">CONTACT</a>
                 </li>
             </ul>
 
@@ -38,10 +38,10 @@
         
         <nav class="navwide">
             <ul class="navwidelist">
-                <li><a href="#saga" class="nav-link">SAGA</a></li>
-                <li><a href="#vessels" class="nav-link">VESSELS</a></li>
-                <li><a href="#gallery" class="nav-link">GALLERY</a></li>
-                <li><a href="#contact" class="nav-link">CONTACT</a></li>
+                <li><a href="#sagaHeader" class="nav-link">SAGA</a></li>
+                <li><a href="#vesselShips" class="nav-link">VESSELS</a></li>
+                <li><a href="#screenShots" class="nav-link">SCREENSHOTS</a></li>
+                <li><a href="#contactHeader" class="nav-link">CONTACT</a></li>
             </ul>
         </nav>
     </header>
@@ -50,42 +50,46 @@
 
     <h2 class="heroimg"><img src="images/heroimg.png" alt="Hero Space Battle"></h2>
 
+        <div class="sagaHeader" id="sagaHeader">SAGA</div>
+
     <!-- Story Synopsis -->
 
     <article class="saga" id="saga">
-        3497 AE: Humanity has made the great leap across spacetime to our neighboring galaxy, the Andromeda Galaxy, utilizing breakthrough warp engine technology that allows vessels to traverse between the folds in spacetime. The United Terran Solar Fleet has been dispatched to investigate an Earth-like expolanet first discovered centuries prior. Upon investigation, footage of distant technoogy of some sort could be visible on the live video feed, before a flash of light silenced all communication from the exploratory team. You are in charge of the recovery unit, find out what happened to the away team!  
+        3497 AE: Humanity has made the great leap across spacetime to our neighboring galaxy, the Andromeda Galaxy, utilizing breakthrough warp engine technology that allows vessels to traverse between the folds in spacetime. The United Terran Solar Fleet has been dispatched to investigate an Earth-like expolanet, dubbed Zell, first discovered centuries prior. Upon investigation, footage of distant technoogy of some sort could be visible on the live video feed, before a flash of light silenced all communication from the exploratory team. You are in charge of the recovery unit, find out what happened to the away team!  
     </article>
 
     <!-- Ship gallery -->
+
+    <div class="vesselShips" id="vesselShips">VESSELS</div>
     
     <ul class="vessels" id="vessels">
         <li class="summary">
             <img src="images/shipSprite1.png" alt="Starship 1" id="img">
-            <div class="overlay">STARSHIP 1</div>
+            <div class="overlay">TERRAN ARROW</div>
         </li>
         <li class="summary">
             <img src="images/shipSprite2.png" alt="Starship 2" id="img">
-            <div class="overlay">STARSHIP 2</div>
+            <div class="overlay">TERRAN HAMMER</div>
         </li>
         <li class="summary">
             <img src="images/shipSprite5.png" alt="Starship 3" id="img">
-            <div class="overlay">STARSHIP 3</div>
+            <div class="overlay">TERRAN GLAIVE</div>
         </li>
         <li class="summary">
             <img src="images/enemySprite1.png" alt="Enemy Ship 1" id="img">
-            <div class="overlay">ENEMY FIGHTER 1</div>
+            <div class="overlay">ZELLIAN ZIPPER</div>
         </li>
         <li class="summary">
             <img src="images/enemySprite2.png" alt="Enemy ship 2" id="img">
-            <div class="overlay">ENEMY FIGHTER 2</div>
+            <div class="overlay">ZELLIAN HORNET</div>
         </li>
         <li class="summary">
             <img src="images/enemySprite3.png" alt="Enemy ship 3" id="img">
-            <div class="overlay">ENEMY FIGHTER 3</div>
+            <div class="overlay">ZELLIAN HULK</div>
         </li>
     </ul>
 
-    <div class="container">
+    <div class="container" id="screenShots">
         <h3>SCREENSHOTS</h3>
         <div id="gallery"></div>
     </div>
@@ -93,9 +97,10 @@
         <img src="" alt="" id="selectedImage">
     </div>
 
+    <div class="contactHeader" id="contactHeader">CONTACT</div>
 
-    <footer class="contact" id="contact">
-        <article id="contact">
+    <article class="contact">
+        <form id="contact">
       
           <label for="name">NAME</label>
           <input type="text" id="username" name="name" placeholder="Your name..">
@@ -107,8 +112,8 @@
 
           <p class="output" id="output1"></p>
       
-        </article>
-    </footer>
+        </form>
+    </article>
 
 
     <script src="script.js"></script>

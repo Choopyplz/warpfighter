@@ -43,7 +43,7 @@ li {
 }
 
 .nav-menu a:hover {
-    color: rgb(71, 40, 193);
+    color: rgb(81, 64, 151);
     font-size: 2rem;
     transition: 0.3s;
 }
@@ -87,6 +87,7 @@ li {
 .hamburger {
     display: block;
     cursor: pointer;
+    border-radius: 5px;
     background-color: rgb(197, 65, 38);
     padding: 4px 8px;
 }
@@ -150,7 +151,6 @@ li {
     max-width: 100%;
     justify-content: space-around;
     list-style: none;
-    padding: 1rem;
     margin-top: 2rem;
 }
 
@@ -188,12 +188,9 @@ li {
 }
 
 h2 {
-    background-color: rgba(228, 76, 53, 0.75);
     margin: 20px 0px 20px 0px;
     max-width: 100%;
-    min-width: 300px;
     padding: 5px;
-    border-radius: 15px;
     display: flex;
     justify-content: center;
     align-self: center;
@@ -201,7 +198,26 @@ h2 {
 
 h2 img {
     max-width: 800px;
-    min-width: 300px;
+    min-width: 275px;
+    border-style: solid;
+    border-width: 10px;
+    border-color: rgba(228, 76, 53, 0.75);
+    border-radius: 15px;
+}
+
+.sagaHeader {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(228, 76, 53, 0.75);
+    font-size: 1em;
+    font-weight: 700;
+    padding: 10px;
+    color: white;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
 }
 
 .saga {
@@ -211,10 +227,25 @@ h2 img {
     max-width: 100%;
     padding: 15px;
     border-radius: 15px;
-    background-color: rgba(71, 40, 193, 0.658);
+    background-color: rgba(70, 76, 160, 0.658);
     color: white;
     font-size: 1.2rem;
     font-weight: 600;
+}
+
+.vesselShips {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(228, 76, 53, 0.75);
+    font-size: 1em;
+    font-weight: 700;
+    padding: 10px;
+    color: white;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
 }
 
 h3 {
@@ -228,7 +259,7 @@ h3 {
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 20px;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .container {
@@ -241,12 +272,21 @@ h3 {
     display: grid;
     grid-template-columns: repeat(1, minmax(300px, 1fr));
     grid-template-rows: auto;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
     grid-gap: 20px;
 }
 
 .galleryImg {
     max-width: 100%;
+    width: 300px;
+    height: 300px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(235, 216, 104);
+    object-fit: cover;
     border-radius: 10px;
     position: relative;
     transition: transform 250ms;
@@ -281,6 +321,21 @@ h3 {
 .gallery img:hover {
     transform: translateY(-10px);
     box-shadow: 3px 3px 15px rgba(228, 76, 53, 0.75);
+}
+
+.contactHeader {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(228, 76, 53, 0.75);
+    font-size: 1em;
+    font-weight: 700;
+    padding: 10px;
+    color: white;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
 }
 
 /* ------------Contact form-------------- */
@@ -318,8 +373,9 @@ input[type=submit]:hover {
 .contact {
     display: flex;
     justify-content: center;
-    border-radius: 2px;
-    background-color: rgba(228, 77, 53, 0.8);
+    justify-items: center;
+    align-items: center;
+    background-color: rgba(70, 76, 160, 0.658);
     padding: 20px;
     border-radius: 15px;
     min-width: 280px;
@@ -347,15 +403,27 @@ input[type=submit]:hover {
     #gallery {
         grid-template-columns: repeat(2, minmax(300px, 1fr));
     }
-
-    h3 {
-        font-size: 2em;
-    }
 }
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1200px) {
     #gallery {
         grid-template-columns: repeat(4, minmax(300px, 1fr));
         justify-items: center;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .sagaHeader {
+        font-size: 1.5rem;
+    }
+
+    .vesselShips {
+        font-size: 1.5rem;
+    }
+
+    .contactHeader {
+        font-size: 1.5rem;
     }
 }
