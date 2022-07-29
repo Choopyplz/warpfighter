@@ -101,21 +101,23 @@
 
     <article class="contact">
         <form id="contact">
-      
-          <label for="name">NAME</label>
-          <input type="text" id="username" name="name" placeholder="Your name..">
+            <label for="Email">EMAIL</label>
+            <input type="email" id="email" name="name" placeholder="Your name..">
+            <div id="result"></div>
 
-          <label for="comment">COMMENT</label>
-          <textarea id="comment" name="comment" placeholder="Write something.." style="height:200px"></textarea>
+            <label for="comment">COMMENT</label>
+            <textarea id="comment" name="comment" placeholder="Write something.." style="height:200px"></textarea>
       
-          <input type="submit" id="submit" value="SUBMIT">
+            <button class="submit" type="submit" id="submit" value="SUBMIT" onclick="return empty()">SUBMIT</button>
 
-          <p class="output" id="output1"></p>
+            <p class="output" id="output1"></p>
       
         </form>
     </article>
 
-
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

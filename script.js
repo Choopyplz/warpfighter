@@ -23,7 +23,7 @@ const selectedIndex = null;
 
 imageIndexes.forEach(i => {
     const image = document.createElement('img');
-    image.src = `/images/panel-${i}.png`;
+    image.src = `images/panel-${i}.png`;
     image.alt = `Space Battle Panel ${i}`;
     image.classList.add('galleryImg');
 
@@ -44,22 +44,45 @@ popup.addEventListener('click', () => {
 
 // -----------------Comment form-----------------
 
-
-const username = document.getElementById('username');
 const submit = document.getElementById('submit');
 const out1 = document.getElementById('output1')
 
-function fun1() {
-    out1.innerHTML = ("Thanks for your feedback, " + username.value + "!");
-}
+const validateEmail = (email) => {
+    return email.match(
+      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+};
 
-submit.addEventListener('click',fun1);
-
-var form = document.getElementById('contact'); {
-function handleForm(event) {
-    event.preventDefault();
+const validate = () => {
+    const $result = $('#result');
+    const email = $('#email').val();
+    $result.text('');
+  
+    if (validateEmail(email)) {
+        $result.text(email + ' CHECKS OUT :)');
+        $result.css('color', 'green');
+        document.querySelector('form').addEventListener('submit', event => {
+        event.preventDefault();
+        out1.innerHTML = ("THANKS FOR YOUR FEEDBACK, " + email + "!");
+        setTimeout ( out1.innerhtml == "", 200);
+      })
+      
+    } else {
+        $result.text(email + ' IS NOT VALID :(');
+        $result.css('color', 'red');
+        document.querySelector('form').addEventListener('submit', event => {
+        event.preventDefault();
+    });
+    return false;
 }}
 
-form.addEventListener('submit', handleForm); {
+function empty() {
+    var x;
+    x = document.getElementById("email").value;
+    if (x == "") {
+        out1.innerHTML = ("PLEASE ENTER AN EMAIL");
+        return false;
+    };
 }
-
+  
+$('#email').on('input', validate);

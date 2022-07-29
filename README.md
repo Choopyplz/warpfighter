@@ -6,7 +6,6 @@
 The game is completely fictional, and all art and copy was created by me, save for a handful of stock images that were manipulated to fit the retro game aesthetic. The site is a single page with links that take you to different sections of the page.
 
 ## Project Features
-__________________
 
 ### CSS
 

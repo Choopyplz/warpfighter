@@ -12,8 +12,9 @@ header {
 }
 
 h1 {
-    max-width: 800px;
+    max-width: 1000px;
     min-width: 300px;
+
 }
 
 body {
@@ -340,7 +341,7 @@ h3 {
 
 /* ------------Contact form-------------- */
 
-input[type=text], select, textarea {
+input[type=email], select, textarea {
     width: 100%;
     padding: 12px; 
     border: 1px solid #ccc;
@@ -353,7 +354,7 @@ input[type=text], select, textarea {
     font-weight: 700;
 }
 
-input[type=submit] {
+button[type=submit] {
     background-color: rgb(235, 216, 104);
     font-weight: 800;
     font-size: 1rem;
@@ -364,26 +365,30 @@ input[type=submit] {
     cursor: pointer;
 }
 
-input[type=submit]:hover {
+button[type=submit]:hover {
     background-color: rgb(152, 67, 244);
+    transform: scale(1.2);
+    transition: 200ms ease-in-out;
     color: white;
-    margin-bottom: 40px;
 }
 
 .contact {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     justify-items: center;
-    align-items: center;
+    align-self: center;
     background-color: rgba(70, 76, 160, 0.658);
     padding: 20px;
     border-radius: 15px;
-    min-width: 280px;
-    max-width: 100%;
+    margin: auto;
+    /* min-width: 300px; */
+    max-width: 75%;
     font-size: 1.2rem;
     font-weight: 800;
     color: rgb(235, 216, 104);
 }
+
 
 @media only screen and (min-width: 768px) {
     .hamburger {
