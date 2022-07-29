@@ -251,13 +251,12 @@ h2 img {
 
 h3 {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     background-color: rgba(228, 76, 53, 0.75);
     font-size: 1em;
+    font-weight: 700;
     padding: 10px;
     color: white;
-    justify-content: center;
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -282,6 +281,7 @@ h3 {
 
 .galleryImg {
     max-width: 100%;
+    margin-top: 30px;
     width: 300px;
     height: 300px;
     border-style: solid;
@@ -333,7 +333,6 @@ h3 {
     font-weight: 700;
     padding: 10px;
     color: white;
-    justify-content: center;
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
